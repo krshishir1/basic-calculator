@@ -1,18 +1,25 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: ghostwhite;
 }
 
 section {
     padding: 50px;
-    min-height: 100%;
-    background-color: ghostwhite;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 
 .calculator-box{
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    width: 40%;
+    width: 90%;
+    
     /* min-height: 450px; */
     background-color: #d2d2d2;
     border-radius: 20px;
@@ -26,7 +33,7 @@ section {
 }
 
 .calculator-box input {
-    width: 90%;
+    width: 95%;
     height: 45px;
     border-radius: 20px;
     padding: 10px 40px;
@@ -40,6 +47,8 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .calBtnContainer .btn {
