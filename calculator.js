@@ -24,7 +24,7 @@ const operationChars = calFunctions.filter(el => el.type == "op")
 
 let outputString = ""
 const inputData = document.getElementById("screen")
-const calBtns = document.querySelectorAll(".calBtnContainer .btn")
+const calBtnContainer = document.querySelector(".calBtnContainer")
 
 function printInput(text) {
     const inputFunc = calFunctions.filter(btn => btn.text === text)[0]
@@ -73,7 +73,6 @@ function clearInput() {
     inputData.value = ""
 }
 
-const calBtnContainer = document.querySelector(".calBtnContainer")
 
 
 let innerContent = ""
@@ -83,6 +82,12 @@ calFunctions.forEach(calBtn => {
 
 calBtnContainer.innerHTML = innerContent
 inputData.value = "0"
+
+inputData.addEventListener("keydown", function(e) {
+    e.preventDefault()
+})
+
+const calBtns = document.querySelectorAll(".calBtnContainer .btn")
 
 calBtns.forEach(btn => {
     btn.addEventListener("click", function() {
