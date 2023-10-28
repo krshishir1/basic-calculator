@@ -24,7 +24,7 @@ const operationChars = calFunctions.filter(el => el.type == "op")
 
 let outputString = ""
 const inputData = document.getElementById("screen")
-inputData.value = ""
+const calBtns = document.querySelectorAll(".calBtnContainer .btn")
 
 function printInput(text) {
     const inputFunc = calFunctions.filter(btn => btn.text === text)[0]
@@ -80,9 +80,9 @@ let innerContent = ""
 calFunctions.forEach(calBtn => {
     innerContent += `<div class="btn"> <p>${calBtn.text}</p> </div>`
 })
-calBtnContainer.innerHTML = innerContent
 
-const calBtns = document.querySelectorAll(".calBtnContainer .btn")
+calBtnContainer.innerHTML = innerContent
+inputData.value = "0"
 
 calBtns.forEach(btn => {
     btn.addEventListener("click", function() {
